@@ -26,8 +26,3 @@ Route::get('/layout', function () {
 Route::get('/middleware', function () {
     return view('middleware');
 });
-
-// Parameterized route example
-Route::get('/lab/{id}', function ($id) {
-    return view('lab', ['id' => $id]);
-});

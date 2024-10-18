@@ -96,42 +96,220 @@ nav a:hover {
 
 /* Profile section styles */
 .profile-section {
-  display: flex; /* Flexbox for horizontal alignment */
-  align-items: center; /* Center items vertically within this section */
-  padding: 2rem; /* Add some padding */
-  max-width: 1000px; /* Maximum width */
-  width: 100%; /* Make it responsive */
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items to the start */
+  padding: 2rem; /* Add padding */
 }
 
-/* Rest of your existing styles... */
 .profile-image {
-  width: 200px; /* Set the desired width for the rectangular image */
-  height: 150px; /* Set the desired height for the rectangular image */
-  overflow: hidden; /* Hide overflow if the image is larger than the container */
-  margin-right: 2rem; /* Space between image and description */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+  flex: 1; /* Allow the image section to take space */
+  max-width: 40%; /* Limit the width of the image section */
+  margin-right: 2rem; /* Space between the image and the description */
 }
 
 .profile-image img {
-  width: 100%; /* Make the image fill the container width */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Remove bottom space */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners */
 }
 
 .profile-description {
-  flex: 1; /* Allow the description to take the remaining space */
+  flex: 2; /* Allow the description to take more space */
 }
 
 .profile-description h1 {
-  font-size: 2rem;
-  color: #00796b; /* Dark teal color for the heading */
-  margin-bottom: 1rem;
+  font-size: 1.8rem; /* Title size */
+  color: #00796b; /* Dark teal color for the title */
+  margin-bottom: 0.5rem; /* Space below title */
 }
 
 .profile-description p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
+  font-size: 1rem; /* Paragraph size */
+  line-height: 1.5; /* Better line spacing */
+  color: #333; /* Dark gray color for text */
 }
 
 
+/* homework.blade.php */
+.homework-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the card */
+  padding: 2rem; /* Add some padding */
+}
+
+.homework-card {
+  display: flex; /* Flexbox for horizontal layout */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure child elements fit within the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px; /* Limit max width for the card */
+  background-color: #ffffff; /* White background */
+}
+
+.homework-image {
+  flex: 1; /* Allow image section to take space */
+}
+
+.homework-image img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.homework-description {
+  flex: 2; /* Allow description to take more space */
+  padding: 1rem; /* Padding for text area */
+}
+
+.homework-description h1 {
+  font-size: 1.8rem; /* Title size */
+  color: #00796b; /* Dark teal color for the title */
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+.homework-description p {
+  font-size: 1rem; /* Paragraph size */
+  line-height: 1.5; /* Better line spacing */
+  color: #333; /* Dark gray color for text */
+}
+
+/* routes.blade.php */
+.routes-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Align items to the start */
+  padding: 2rem; /* Add some padding */
+}
+
+.routes-image {
+  flex: 1; /* Allow image section to take space */
+  max-width: 40%; /* Limit the width of the image */
+}
+
+.routes-image img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.routes-description {
+  flex: 2; /* Allow description to take more space */
+  padding: 1rem; /* Padding for text area */
+}
+
+.routes-description h1 {
+  font-size: 1.8rem; /* Title size */
+  color: #00796b; /* Dark teal color for the title */
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+.routes-description p {
+  font-size: 1rem; /* Paragraph size */
+  line-height: 1.5; /* Better line spacing */
+  color: #333; /* Dark gray color for text */
+}
+
+
+/* layout.blade.php */
+.layout-section {
+  padding: 2rem; /* Padding around the section */
+  text-align: center; /* Center text for the entire section */
+}
+
+.layout-summary {
+  margin-bottom: 2rem; /* Space below the summary */
+}
+
+.layout-cards {
+  display: flex; /* Use flexbox to create a horizontal row of cards */
+  justify-content: space-around; /* Space between the cards */
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  gap: 2rem; /* Space between cards */
+}
+
+.layout-card {
+  background-color: #f5f5f5; /* Light background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around cards */
+  overflow: hidden; /* Ensure content fits within the card */
+  width: 300px; /* Fixed width for each card */
+  text-align: left; /* Left-align the content within each card */
+}
+
+.layout-card-image img {
+  width: 100%; /* Ensure the image takes full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #ccc; /* Line separating image from content */
+}
+
+.layout-card-description {
+  padding: 1rem; /* Padding inside the card description */
+}
+
+.layout-card-description h2 {
+  font-size: 1.4rem; /* Title size within the card */
+  color: #00796b; /* Teal color for titles */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.layout-card-description p {
+  font-size: 1rem; /* Paragraph size */
+  color: #333; /* Dark gray text color */
+}
+
+
+/* middleware.blade.php */
+.mw-section {
+  padding: 2rem; /* Padding around the section */
+  text-align: center; /* Center text for the entire section */
+}
+
+.mw-cards {
+  display: flex; /* Use flexbox to create a horizontal row of cards */
+  justify-content: space-around; /* Space between the cards */
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  gap: 2rem; /* Space between cards */
+}
+
+.mw-card {
+  background-color: #f5f5f5; /* Light background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around cards */
+  overflow: hidden; /* Ensure content fits within the card */
+  width: 300px; /* Fixed width for each card */
+  text-align: left; /* Left-align the content within each card */
+}
+
+.mw-card-image img {
+  width: 100%; /* Ensure the image takes full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #ccc; /* Line separating image from content */
+}
+
+.mw-card-description {
+  padding: 1rem; /* Padding inside the card description */
+}
+
+.mw-card-description h2 {
+  font-size: 1.4rem; /* Title size within the card */
+  color: #00796b; /* Teal color for titles */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.mw-card-description p {
+  font-size: 1rem; /* Paragraph size */
+  color: #333; /* Dark gray text color */
+}
+
+.mw-summary {
+  margin-top: 2rem; /* Space above the summary section */
+  text-align: center; /* Center align summary */
+}
+
+.mw-summary h1 {
+  font-size: 2rem; /* Large title for summary */
+  color: #00796b; /* Teal color for title */
+}
+
+.mw-summary p {
+  font-size: 1.2rem; /* Slightly larger text for the summary */
+  color: #333; /* Dark gray color for text */
+}
