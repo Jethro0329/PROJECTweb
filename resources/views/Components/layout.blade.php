@@ -22,7 +22,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Lab Portfolio</p>
+        <p>&copy; 2024 My Lab Portfolio</p>
     </footer>
 </body>
 </html>

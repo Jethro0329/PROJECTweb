@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+/* Ensure the body and html are set to full height */
+html, body {
+  height: 100%; /* Full height */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange items vertically */
+}
+
+/* Main section to grow and center contents */
+main {
+  flex: 1; /* Allow the main section to take up available space */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
 /* Set a light blue background and adjust font styles */
 body {
   background-color: #e0f7fa; /* Light blue background */
@@ -25,9 +42,7 @@ footer {
   background: #b2ebf2; /* Consistent footer background */
   padding: 1rem;
   text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  width: 100%; /* Full width */
 }
 
 /* Navigation styles */
@@ -59,7 +74,7 @@ nav a:hover {
   text-align: center;
 }
 
-.navbar{
+.navbar {
   text-align: center; /* Center align navigation */
   margin: 1rem 0;
 }
@@ -69,36 +84,38 @@ nav a {
   color: #00796b; /* Dark teal color for links */
   padding: 0.5rem 1rem; /* Add padding for better spacing */
   margin: 0 10px; /* Space between links */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Add transition for transform */
   border-radius: 5px; /* Rounded corners */
 }
 
 nav a:hover {
   background-color: #80deea; /* Light blue on hover */
   color: #004d40; /* Darker color on hover */
+  transform: scale(2.0); /* Scale the text to grow */
 }
 
 /* Profile section styles */
 .profile-section {
-  display: flex;
-  align-items: center; /* Vertically center the image and text */
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  display: flex; /* Flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically within this section */
+  padding: 2rem; /* Add some padding */
+  max-width: 1000px; /* Maximum width */
+  width: 100%; /* Make it responsive */
 }
 
+/* Rest of your existing styles... */
 .profile-image {
-  width: 200px; /* Adjusted width for the rectangular image */
-  height: 150px; /* Adjusted height for the rectangular image */
+  width: 200px; /* Set the desired width for the rectangular image */
+  height: 150px; /* Set the desired height for the rectangular image */
   overflow: hidden; /* Hide overflow if the image is larger than the container */
   margin-right: 2rem; /* Space between image and description */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
 }
 
 .profile-image img {
-  width: 100%; /* Make the image fill the container */
+  width: 100%; /* Make the image fill the container width */
   height: auto; /* Maintain the aspect ratio */
-  object-fit: cover; /* Cover the area of the container, cropping if necessary */
+  display: block; /* Remove bottom space */
 }
 
 .profile-description {
@@ -116,4 +133,5 @@ nav a:hover {
   line-height: 1.6;
   color: #333;
 }
+
 
